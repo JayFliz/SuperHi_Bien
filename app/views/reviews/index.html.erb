@@ -1,17 +1,5 @@
-  <h1>Bien Reviews</h1>
-
-  <h2>Best ever</h2>
-
-  <p>random number is <%= @number %></p>
-
-  <p>Restaurants</p>
-
-    <% @reviews.each do |review|  %>
-
-        <div class="review">
-
-          <%= review %>
-
-        </div>
-
-    <% end %>
+<% @reviews.each do |review| %>
+  <div class="review">
+    <%= link_to review.title, review_path(review) %>
+  </div>
+<% end %>
